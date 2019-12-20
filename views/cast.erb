@@ -1,13 +1,12 @@
 <div class="container"  >
     <div class="row">
+        <h2>Inputs</h2>
         <table class="table table-bordered table-inverse" >
             <col style="width: 50%;">
             <col style="width: 50%;">
             <thead class="thead-inverse">
-                <tr>
-                    <th colspan="2" width="300" ><b>Inputs</b></th>
-                </tr>
-                </thead>
+            
+            </thead>
                 <tbody>
                     <tr>
                         <td scope="row">Name of the Gas</td>
@@ -38,22 +37,29 @@
     <div class="row">
         <h3>Gas Properties </h3>
         <table class="table table-striped table-bordered table-inverse table-responsive">
+            <col style="width: 16%;">
+            <col style="width: 16%;">
+            <col style="width: 16%;">
+            <col style="width: 16%;">            
             <thead class="thead-inverse">
                 <tr>
-                    <th><b>Pressure</b></th>
-                    <th><b>Temperature</b></th>
-                    <th><b>z Factor</b></th>
-                    <th><b>Formation Volume Factor B<sub>g</sub></b></th>
-                    <th><b>Viscosity &mu;<sub>g</sub></th>
-                    <th><b>Density &rho;<sub>g</sub></th>
+                    <th class="align-top text-center"><b>Pressure</b></th>
+                    <th class="align-top text-center"><b>Temperature</b></th>
+                    <th class="align-top text-center"><b>z Factor</b></th>
+                    <th class="align-top text-center"><b>Formation Volume Factor B<sub>g</sub></b></th>
+                    <th class="align-top text-center"><b>Viscosity &mu;<sub>g</sub></th>
+                    <th class="align-top text-center"><b>Density &rho;<sub>g</sub></th>
 
                 </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td scope="row"><%= @mygas.z</td>
-                        <td></td>
-                        <td></td>
+                        <td scope="row"><%= @press %></td>
+                        <td><%= @temp %></td>
+                        <td><%= @mygas.zfactor_g %></td>
+                        <td><%= @mygas.b_g %></td>
+                        <td><%= @mygas.mu_g %></td>
+                        <td><%= @mygas.rho_g %></td>
                     </tr>
                     <tr>
                         <td scope="row"></td>

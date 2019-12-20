@@ -1,5 +1,5 @@
 class Gas
-    attr_reader :name, :spgr, :co2, :h2s, :n2, :zfactor_g, :b_g, :rho_g
+    attr_reader :name, :spgr, :co2, :h2s, :n2, :zfactor_g, :b_g, :rho_g, :mu_g
     
 
     def initialize(name="New Gas",spgr=0.65,co2=nil,h2s=nil,n2=nil)
@@ -53,8 +53,13 @@ class Gas
         end 
         @zfactor_g=z_new
         @b_g = 0.02827*@zfactor_g*(temp+459.67)/press
-        @rho_g = 28.9586*@spgr*press/(r * @zfactor_g * (temp+459.67))
-        x = 3.5 + (986/(temp+459.67)) + 0.01*@spgr*28.9586
+        @rho_g = 0.0433 * @spgr * press / (@zfactor_g * (temp+459.67))
+        x = 3.448 + (986.4/(temp+459.67)) + 0.01009*@spgr*28.9586
+        y = 2.4 - 0.2*x
+        k = (9.379 + 0.0160 * 28.9586 * @spgr) * ((temp+459.67)**1.5)
+        k /= 209.2 + 19.26*28.9586*@spgr + (temp+459.67)
+        @mu_g = k * 0.0001 * Math.exp(x * (@rho_g**y)) 
+        @rho_g *= 62.428
     end
 end
 
