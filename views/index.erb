@@ -1,0 +1,85 @@
+<div class="container">
+        <form action="calc" method="POST">
+          
+          <div class="form-group">
+            <label for="gasname">Name of Gas</label>
+            <input type="text"
+              class="form-control" name="gasname" id="gasname" aria-describedby="helpId" placeholder="">
+            <small id="helpId" class="form-text text-muted">Enter name for gas</small>
+          
+            <div class="form-group">
+              <label for="specificgravity">Specific Gravity</label>
+              <input type="text"
+                class="form-control" name="specificgravity" id="specificgravity" aria-describedby="helpId" placeholder="">
+              <small id="helpId" class="form-text text-muted">Enter Specific Gravity, usually between 0.5 to 1.5</small>
+            </div>
+          </div>
+
+          <div class="row">
+            
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="co2">CO<sub>2</sub> percentage</label>
+                <input type="text" class="form-control" name="co2" id="co2" aria-describedby="helpId" placeholder="">
+                <small id="helpId" class="form-text text-muted">CO<sub>2</sub> %</small>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="n2">N<sub>2</sub> percentage</label>
+                <input type="text" class="form-control" name="n2" id="n2" aria-describedby="helpId" placeholder="">
+                <small id="helpId" class="form-text text-muted">N<sub>2</sub> %</small>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="h2s">H2S</label>
+                <input type="text" class="form-control" name="h2s" id="h2s" aria-describedby="helpId" placeholder="">
+                <small id="helpId" class="form-text text-muted">H2S %</small>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row">
+
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="press">Pressure (psi)</label>
+                <input type="text" class="form-control" name="press" id="press" aria-describedby="helpId" placeholder="">
+                <small id="helpId" class="form-text text-muted"></small>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="temp">Temperature (°F)</label>
+                <input type="text" class="form-control" name="temp" id="temp" aria-describedby="helpId" placeholder="">
+                <small id="helpId" class="form-text text-muted"></small>
+              </div>
+            </div>
+          
+          </div>
+
+          <div class="row">
+
+            <div class="col-sm-3">
+
+                <div class="form-group">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-control" name="savegas" id="savegas" value="checkedValue">
+                    Save gas
+                  </label>
+                </div>                  
+            </div>
+            <div class="col-sm-9">
+              <div align="right">
+                <button type="submit" class="btn btn-primary">Get Properties</button>                  
+              </div>                
+            </div>
+            
+          </div>
+
+      </form>
