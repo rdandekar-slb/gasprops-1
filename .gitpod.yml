@@ -1,0 +1,6 @@
+ports:
+- port: 4567
+  onOpen: open-preview
+tasks:
+- init: gem install sinatra --no-document && 
+        ruby main.rb
